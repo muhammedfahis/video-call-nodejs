@@ -5,10 +5,10 @@ const cors = require('cors');
 
 
 const bodyParser= require('body-parser');
-const db = require('./config/connection');
+const db = require('../config/connection');
 
 const server = require('http').createServer(app);
-const indexRouter = require('./routes/index');
+const indexRouter = require('../routes/index');
 
 const io = require('socket.io')(server,{
     cors: {
