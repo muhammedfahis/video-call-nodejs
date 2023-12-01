@@ -12,7 +12,7 @@ const indexRouter = require('./routes/index');
 
 const io = require('socket.io')(server,{
     cors: {
-        origin: ['http://localhost:4200','ws://localhost:4200','http://192.168.1.15:4200'],
+        origin: ['http://localhost:4200','ws://localhost:4200','http://192.168.1.15:4200','https://video-call-angular-eight.vercel.ap','*'],
         methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true // if needed
@@ -32,7 +32,7 @@ db.connect((data,err)=>{
 
 
 app.use(cors({
-    origin: ['http://localhost:4200','http://192.168.1.15:4200'], // Allow requests from this origin
+    origin: ['http://localhost:4200','http://192.168.1.15:4200','https://video-call-angular-eight.vercel.app','*'], // Allow requests from this origin
     methods: ['GET', 'POST','PUT','PATCH','DELETE'], // Specify allowed HTTP methods,
 }));
 
