@@ -6,7 +6,7 @@ const invalidRequestHandler = require('../libs/middleware/invalidRequestHandler'
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.status(200).send({
+    res.status(200).json({
         success:true,
         title: 'Nodejs Task Project Test '
     });
