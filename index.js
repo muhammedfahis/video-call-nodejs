@@ -12,7 +12,7 @@ const indexRouter = require('./routes/index');
 
 const io = require('socket.io')(server,{
     cors: {
-        origin: ['http://localhost:4200','ws://localhost:4200','http://18.222.248.59:4200','http://18.222.248.59:80','*'],
+        origin: '*',
         methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true // if needed
