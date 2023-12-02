@@ -31,10 +31,7 @@ db.connect((data,err)=>{
 });
 
 
-app.use(cors({
-    origin: ['http://localhost:4200','http://192.168.1.15:4200','http://18.222.248.59:4200','http://18.222.248.59:80','*'], // Allow requests from this origin
-    methods: ['GET', 'POST','PUT','PATCH','DELETE'], // Specify allowed HTTP methods,
-}));
+app.use(cors());
 
 app.use(bodyParser.json({limit:"30mb",extended:true}));
 app.use(bodyParser.urlencoded( {limit:'30mb',extended:true}));
