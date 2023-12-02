@@ -36,6 +36,7 @@ const getSingleUserByEmailDB =async(email) =>{
             data:user
         }
     } catch (error) {
+        console.log(error);
         return {
             success:false,
             message:'Something went Wrong'
@@ -54,6 +55,7 @@ const updateUserByIdDB =async(id,data) =>{
             message:'User updated Successfully',
         }
     } catch (error) {
+        console.log(error);
         return {
             success:false,
             message:'Something went Wrong'
@@ -71,6 +73,7 @@ const createRoomDB =async(data) =>{
             message:'room created successfully',
         }
     } catch (error) {
+        console.log(error);
         return {
             success:false,
             message:'Something went Wrong'
@@ -88,6 +91,7 @@ const getRoomsDB =async(data) =>{
             message:'room fetched successfully',
         }
     } catch (error) {
+        console.log(error);
         return {
             success:false,
             message:'Something went Wrong'
